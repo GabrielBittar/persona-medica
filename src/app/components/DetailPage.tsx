@@ -18,15 +18,22 @@ const room_offsets: Record<string, { x: number; y: number }> = {
   room3: { x: 14, y: -7 },
   room4: { x: 13, y: 10 },
   room5: { x: 2, y: 12 },
-}
+};
 
-export function DetailPage({ id, title, hotspot, mapImage, description, additionalInfo }: DetailPageProps) {
+export function DetailPage({
+  id,
+  title,
+  hotspot,
+  mapImage,
+  description,
+  additionalInfo,
+}: DetailPageProps) {
   const navigate = useNavigate();
   const location = useLocation();
-  
+
   // Recuperar a posição do mapa salva
   const savedMapPosition = (location.state as any)?.mapPosition;
-  
+
   const handleBackToMap = () => {
     if (savedMapPosition) {
       // Voltar com a posição salva
@@ -36,11 +43,11 @@ export function DetailPage({ id, title, hotspot, mapImage, description, addition
       navigate("/map");
     }
   };
-  
-  const offset = room_offsets[id] || { x: 1, y : 1 };
- 
-  const centerX = hotspot.x + (hotspot.width / 2) + offset.x;
-  const centerY = hotspot.y + (hotspot.height / 2) + offset.y;
+
+  const offset = room_offsets[id] || { x: 1, y: 1 };
+
+  const centerX = hotspot.x + hotspot.width / 2 + offset.x;
+  const centerY = hotspot.y + hotspot.height / 2 + offset.y;
 
   // Fator de zoom aplicado (mesmo valor usado no mapa interativo)
   const zoomScale = 3.8;
@@ -67,13 +74,13 @@ export function DetailPage({ id, title, hotspot, mapImage, description, addition
           {/* Imagem de destaque - recorte exato da área do hotspot */}
           <div className="relative bg-gradient-to-br from-sky-100 to-teal-100 p-8">
             <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg bg-slate-200">
-              <div 
+              <div
                 className="absolute inset-0"
                 style={{
                   backgroundImage: `url(${mapImage})`,
                   backgroundSize: `${zoomScale * 85}%`,
                   backgroundPosition: `${centerX}% ${centerY}%`,
-                  backgroundRepeat: 'no-repeat',
+                  backgroundRepeat: "no-repeat",
                 }}
               />
             </div>
@@ -126,13 +133,12 @@ export function DetailPage({ id, title, hotspot, mapImage, description, addition
             >
               <div className="flex flex-wrap gap-4">
                 <div className="bg-blue-50 border border-blue-200 rounded-lg px-6 py-4">
-                  <p className="text-sm text-blue-700 font-medium">Informações Gerais</p>
+                  <p className="text-sm text-blue-700 font-medium">
+                    Dr. Gabriel Gouveia Coelho
+                  </p>
                 </div>
                 <div className="bg-sky-50 border border-sky-200 rounded-lg px-6 py-4">
-                  <p className="text-sm text-sky-700 font-medium">Preceptor</p>
-                </div>
-                <div className="bg-teal-50 border border-teal-200 rounded-lg px-6 py-4">
-                  <p className="text-sm text-teal-700 font-medium">Residente</p>
+                  <p className="text-sm text-sky-700 font-medium">2026</p>
                 </div>
               </div>
             </motion.div>

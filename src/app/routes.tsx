@@ -29,11 +29,11 @@ export const router = createBrowserRouter([
     Component: Room2,
   },
   {
-    path: "/room3",
+    path: "/decisao-critica-etica",
     Component: Room3,
   },
   {
-    path: "/room4",
+    path: "/gerenciamento-de-erros",
     Component: Room4,
   },
 ]);

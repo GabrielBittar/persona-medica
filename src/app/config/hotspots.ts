@@ -36,8 +36,8 @@ export const hotspots: Hotspot[] = [
     y: 20,
     width: 12,
     height: 18,
-    route: "/room3",
-    label: "Sala 3",
+    route: "/decisao-critica-etica",
+    label: "Decisão crítica e ética à beira do leito",
   },
   {
     id: "room4",
@@ -45,8 +45,8 @@ export const hotspots: Hotspot[] = [
     y: 59,
     width: 12,
     height: 18,
-    route: "/room4",
-    label: "Sala 4",
+    route: "/gerenciamento-de-erros",
+    label: "Gerenciamento de erros e segurança do paciente",
   },
   {
     id: "room5",
@@ -56,7 +56,7 @@ export const hotspots: Hotspot[] = [
     height: 20,
     route: "/reuniao-de-feedback",
     label: "Reunião de feedback",
-  }
+  },
 ];
 
 // Função helper para calcular o centro do hotspot (para usar no objectPosition)

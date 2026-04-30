@@ -3,7 +3,7 @@ import mapImage from "../../imports/gabriel-g-background-vetorial.png";
 import { hotspots } from "../config/hotspots";
 
 export default function Room1() {
-  const hotspot = hotspots.find(h => h.id === "room1")!;
+  const hotspot = hotspots.find((h) => h.id === "room1")!;
 
   return (
     <DetailPage
@@ -15,7 +15,7 @@ export default function Room1() {
       additionalInfo={[
         "Aplicação e exemplo de dinâmica: Geralmente utiliza-se um paciente simulado (um ator ou outro residente) que interpreta um familiar em choque ou negação. Em uma dinâmica, por exemplo, o residente deve abordar a pessoa em um local barulhento e levá-la para um canto mais reservado. O foco aqui é o manejo da crise. O preceptor observa se o residente consegue manter a calma diante de gritos ou choro intenso e se utiliza frases curtas e claras.",
         "Importante: Comunicar notícias ruins/sensíveis exige empatia, preparação e clareza, utilizando o protocolo SPIKES (S-Setting (organização ou configuração do ambiente), P-Perception (percepção), I-Invitation (convite), K-Knowledge (conhecimento), E-Emotions (emoções), S-Strategy/Summary (estratégia e resumo)) para estruturar a conversa.",
-        "Principais referências: Buckman, R. How to Break Bad News: A Guide for Health Care Professionals, 1992; Silverman, J. et al. Skills for Communicating with Patients, 2013."
+        "Principais referências sugeridas: Buckman, R. How to Break Bad News: A Guide for Health Care Professionals, 1992 [Este livro é essencial para entender a psicologia por trás da recepção de notícias catastróficas.] / Silverman, J. et al. Skills for Communicating with Patients, 2013. [Este é o guia definitivo sobre o modelo Calgary-Cambridge, que detalha cada etapa da consulta médica, focando em habilidades de comunicação que podem ser treinadas via roleplay]",
       ]}
     />
   );
